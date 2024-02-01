@@ -7,7 +7,7 @@ const SocialLinks = () => {
   return (
     <div
       className="py-32 flex flex-col items-center"
-      style={{ background: "rgb(15,15,15)" }}
+      
     >
       <span className="text-2xl">/ Follow us</span>
       <div className="gap-1 mt-20 flex flex-col w-full">
