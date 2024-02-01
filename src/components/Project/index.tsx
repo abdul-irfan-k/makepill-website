@@ -36,7 +36,9 @@ const Project = () => {
       ref={projectContainerRef}
       style={{ background: "rgb(15,15,15)" }}
     >
-      <ProjectBackgroundContainer hoveredProject={hoveredProject} />
+      {!projectContainerHovered && (
+        <ProjectBackgroundContainer hoveredProject={hoveredProject} />
+      )}
       <div className="gap-24 px-32 py-40 flex flex-col">
         {ProjectList.map((project, index) => {
           return (
