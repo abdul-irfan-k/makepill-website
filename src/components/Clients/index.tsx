@@ -18,7 +18,7 @@ const Clients = () => {
   ];
 
   return (
-    <div>
+    <div className="text-6xl">
       <TextHorizontalScrollEffect scrollDirection="right" speed={0.12}>
         <div className="flex gap-32  w-auto " style={{ whiteSpace: "nowrap" }}>
           {clients1.map((elm, index) => {

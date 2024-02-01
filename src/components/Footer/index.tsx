@@ -1,6 +1,10 @@
+import SocialLinks from "./SocialLinks"
+
 const Footer = () => {
     return (
-      <div>Footer</div>
+      <div className="text-slate-50">
+        <SocialLinks />
+      </div>
     )
   }
   
