@@ -1,8 +1,34 @@
+"use client";
+import { useEffect, useRef } from "react";
 import Video from "../Shared/Video";
+import gsap from "gsap";
 
 const Culture = () => {
+  const cultureContainer = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!cultureContainer.current) return;
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: cultureContainer.current,
+        start: "top top",
+        end: "bottom top",
+        toggleClass: {
+          className: "bg-white-mode",
+          targets: "body",
+        },
+        markers: true,
+      },
+    });
+  }, [cultureContainer.current]);
   return (
-    <div className="gap-10 px-32 py-32 flex justify-between items-center">
+    <div
+      className="gap-10 px-32 pt-80 pb-32 flex justify-between items-center"
+      style={{
+        background: "var(--primary-color)",
+        color: "var(--contrast-color)",
+      }}
+      ref={cultureContainer}
+    >
       <div className="w-full">
         <span>/Our culture</span>
         <div className="mt-10 gap-10 flex flex-col text-4xl">
@@ -20,12 +46,7 @@ const Culture = () => {
         </div>
       </div>
       <div className="relative w-full aspect-square">
-        <Video
-          src="Asset/Video/ai_pill_5352472919.webm"
-          autoPlay
-          muted
-          loop
-        />
+        <Video src="Asset/Video/ai_pill_5352472919.webm" autoPlay muted loop />
       </div>
     </div>
   );

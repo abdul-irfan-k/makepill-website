@@ -1,6 +1,12 @@
 const Awards = () => {
   return (
-    <div className="gap-10 px-32 py-32 flex justify-between ">
+    <div
+      className="gap-10 px-32 py-32 flex justify-between "
+      style={{
+        background: "var(--primary-color)",
+        color: "var(--contrast-color)",
+      }}
+    >
       <div className="relative w-full text-2xl">
         <span>/Give life to your ideas</span>
       </div>
@@ -38,10 +44,6 @@ const Awards = () => {
               </div>
             </div>
           </div>
-
-
-
-
         </div>
       </div>
     </div>

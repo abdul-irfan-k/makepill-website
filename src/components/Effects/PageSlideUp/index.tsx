@@ -22,7 +22,7 @@ const PageSlideUp: FC<PageSlideUpProps> = ({ children }) => {
           start: "top top",
           pin: true,
           pinSpacing: false,
-          markers: true,
+          // markers: true,
         },
       });
     });

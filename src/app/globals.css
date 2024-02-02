@@ -3,7 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #0f0f0f;
+  --contrast-color: #fff;
+  --primary-color-c: 15,15,15;
+  --contrast-color-c: 255,255,255;
+}
+
+.bg-dark-mode {
+  --primary-color: #0f0f0f;
+  --contrast-color: #fff;
+  --primary-color-c: 15,15,15;
+  --contrast-color-c: 255,255,255;
+}
+.bg-white-mode {
+  --primary-color: #fff;
+  --contrast-color: #0f0f0f;
+  --primary-color-c: 255,255,255;
+  --contrast-color-c: 15,15,15;
 }

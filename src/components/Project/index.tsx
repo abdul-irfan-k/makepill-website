@@ -20,12 +20,11 @@ const Project = () => {
       scrollTrigger: {
         trigger: projectContainerRef.current,
         start: "top 300",
-        end: "bottom bottom",
+        end: "bottom 300",
         onEnter: () => setProjectContainerHovered(false),
         onEnterBack: () => setProjectContainerHovered(false),
         onLeave: () => setProjectContainerHovered(true),
         onLeaveBack: () => setProjectContainerHovered(true),
-        markers: true,
       },
     });
   }, [projectContainerRef.current]);
@@ -34,12 +33,15 @@ const Project = () => {
     <div
       className="relative "
       ref={projectContainerRef}
-      style={{ background: "rgb(15,15,15)" }}
+      style={{
+        background: "var(--primary-color)",
+        color: "var(--contrast-color)",
+      }}
     >
       {!projectContainerHovered && (
         <ProjectBackgroundContainer hoveredProject={hoveredProject} />
       )}
-      <div className="gap-24 px-32 py-40 flex flex-col">
+      <div className="gap-24 px-32 pt-40 flex flex-col">
         {ProjectList.map((project, index) => {
           return (
             <div className=" w-full z-[100]" key={index}>
