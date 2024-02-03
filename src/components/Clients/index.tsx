@@ -25,17 +25,17 @@ const Clients = () => {
         color: "var(--contrast-color)",
       }}
     >
-      <TextHorizontalScrollEffect scrollDirection="right" speed={0.12}>
-        <div className="flex gap-32  w-auto " style={{ whiteSpace: "nowrap" }}>
+      <TextHorizontalScrollEffect scrollDirection="right" speed={0.1}>
+        <div className="flex   w-auto " style={{ whiteSpace: "nowrap" }}>
           {clients1.map((elm, index) => {
-            return <span key={index}>{elm}</span>;
+            return <span key={index} className="px-16">{elm}</span>;
           })}
         </div>
       </TextHorizontalScrollEffect>
       <TextHorizontalScrollEffect scrollDirection="left" speed={0.1}>
-        <div className="flex gap-32  w-auto " style={{ whiteSpace: "nowrap" }}>
+        <div className="flex  w-auto " style={{ whiteSpace: "nowrap" }}>
           {clients2.map((elm, index) => {
-            return <span key={index}>{elm}</span>;
+            return <span key={index} className="px-16">{elm}</span>;
           })}
         </div>
       </TextHorizontalScrollEffect>

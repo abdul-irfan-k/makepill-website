@@ -45,12 +45,12 @@ const TextHorizontalScrollEffect: FC<TextHorizontalScrollEffectProps> = ({
     <div className="relative w-full  overflow-hidden">
       <div
         style={{ textTransform: "uppercase",  margin: "0" }}
-        className="w-fit flex "
+        className="w-fit flex relative"
       >
         <div  ref={scrollTextDiv1Ref} className="">
           {children}
         </div>
-        <div ref={scrollTextDiv2Ref} className="pl-32 absolute  left-[200%] ">
+        <div ref={scrollTextDiv2Ref} className="absolute left-[100%] ">
           {children}
         </div>
       </div>

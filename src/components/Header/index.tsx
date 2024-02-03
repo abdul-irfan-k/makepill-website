@@ -4,19 +4,17 @@ import NavButton from "./NavButton";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 const Header = () => {
-  const [isNavbarActive, setIsNavbarActive] = useState(true);
- 
+  const [isNavbarActive, setIsNavbarActive] = useState(false);
 
   return (
     <div
-      className="absolute w-screen h-screen z-[200]"
+      className="fixed w-screen z-[200]"
       style={{
-        background: "var(--primary-color)",
         color: "var(--contrast-color)",
       }}
     >
-      <div className="w-full px-10 pt-10 flex justify-between ">
-        <span>makepill</span>
+      <div className="relative w-full px-10 pt-10 flex justify-between z-[110]">
+        <span className="text-xl font-bold">makepill</span>
         <span>/index</span>
         <NavButton
           onClickHandler={(status: boolean) => setIsNavbarActive(status)}
@@ -36,9 +34,7 @@ const Header = () => {
         initial={"notActive"}
         animate={isNavbarActive ? "active" : "notActive"}
       >
-        <Navbar />
-
-      
+        <Navbar isActive={isNavbarActive} />
       </motion.div>
     </div>
   );

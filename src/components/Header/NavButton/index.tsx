@@ -26,6 +26,9 @@ const NavButton: FC<NavButtonProps> = ({ onClickHandler }) => {
           },
         }}
         animate={isClicked ? "hover" : "Initial"}
+        style={{
+          borderColor:"var(--contrast-color)"
+        }}
       >
         M
       </motion.div>
@@ -40,9 +43,12 @@ const NavButton: FC<NavButtonProps> = ({ onClickHandler }) => {
           },
         }}
         animate={isClicked ? "hover" : "Initial"}
+        style={{
+          borderColor:"var(--contrast-color)"
+        }}
       >
-        <div className="h-[1.2px] w-full bg-slate-50 block"></div>
-        <div className="h-[1.2px] w-full bg-slate-50 block"></div>
+        <div className="h-[1.2px] w-full  block" style={{background:"var(--contrast-color)"}}></div>
+        <div className="h-[1.2px] w-full  block" style={{background:"var(--contrast-color)"}}></div>
       </motion.div>
     </div>
   );

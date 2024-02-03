@@ -4,7 +4,8 @@ import Lenis from "@studio-freight/lenis";
 import { useFrame } from "@studio-freight/hamo";
 
 const lenisContext = createContext<Lenis | undefined>(undefined);
-export const useLenisScrollContext = () => useContext(lenisContext);
+export const useLenisScrollContext = (): Lenis | undefined =>
+  useContext(lenisContext);
 
 const SmothScrollScrollProvider = ({
   children,

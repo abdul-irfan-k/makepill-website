@@ -4,7 +4,7 @@ import NavRow from "../NavRow";
 import gsap from "gsap";
 import { useLenisScrollContext } from "@/provider/SmoothScrollProvider";
 import Video from "@/components/Shared/Video";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 type row =
   | "home"
@@ -17,7 +17,7 @@ type row =
   | "services1"
   | "contact1"
   | "vision1";
-const Navbar = () => {
+const Navbar = ({ isActive }: { isActive: boolean }) => {
   const [selectedRow, setSelectedRow] = useState<row>("home");
 
   const navlist = useRef<HTMLDivElement>(null);
@@ -31,13 +31,12 @@ const Navbar = () => {
       y: (i) => i * 110,
     });
 
-    lenisScroll.stop();
     //@ts-ignore
     window.addEventListener("wheel", (e) => {
       const { deltaY } = e;
       gsap.to(".box", {
         duration: 1,
-        ease:"easeOut",
+        ease: "easeOut",
         y: deltaY > 0 ? "-=200" : "+=200",
         modifiers: {
           y: gsap.utils.unitize(wrap),
@@ -57,22 +56,29 @@ const Navbar = () => {
         },
       });
     });
+
     return () => {
       window.removeEventListener("wheel", () => console.log("removed"));
     };
   }, [lenisScroll]);
 
+  useEffect(() => {
+    if (lenisScroll == undefined) return;
+    if (isActive) lenisScroll.stop();
+    else lenisScroll.start();
+  }, [isActive, lenisScroll]);
+
   return (
     <div
-      className="fixed px-10 w-screen h-screen z-[200]    "
+      className="fixed px-10 w-screen h-screen z-[100]    "
       style={{
-        background: "var(--primary-color)",
-        color: "var(--contrast-color)",
+        background: "#0f0f0f",
+        color: "#fff",
       }}
     >
       <div className="flex w-full h-full">
         <div className="relative w-[16%] flex items-center">
-          <div className="gap-2 flex flex-col">
+          <div className="gap-10 flex flex-col">
             <span>Instagram</span>
             <span>X/Twitter</span>
             <span>Dribble</span>
