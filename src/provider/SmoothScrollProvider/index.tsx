@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import Lenis from "@studio-freight/lenis";
-// import Lenis from "@studio-freight/react-lenis/types";
 import { useFrame } from "@studio-freight/hamo";
 
 const SmothScrollScrollProvider = ({
@@ -34,9 +32,7 @@ const SmothScrollScrollProvider = ({
 
   return (
     <>
-      {/* <ReactLenis root  > */}
       {children}
-      {/* </ReactLenis> */}
     </>
   );
 };

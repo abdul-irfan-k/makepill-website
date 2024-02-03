@@ -12,7 +12,7 @@ import Project from "@/components/Project";
 const HomePage = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <PageSlideUp>
         <div className="slide">
           <Hero />

@@ -16,7 +16,6 @@ const Culture = () => {
           className: "bg-white-mode",
           targets: "body",
         },
-        markers: true,
       },
     });
   }, [cultureContainer.current]);

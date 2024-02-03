@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Video from "../Shared/Video";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import { slideUp } from "./anim";
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -26,23 +27,69 @@ const Hero = () => {
     <div
       className="relative w-full h-screen flex justify-center items-center"
       ref={heroContainer}
+      style={{
+        background: "var(--primary-color)",
+        color: "var(--contrast-color)",
+      }}
     >
-      <div className=" mt-40 text-8xl text-center z-20 text-slate-50">
-        <span>Digital products </span>
-        <div className="relative text-center ">
-          <span>creatives &</span>
-          <span
-            className="relative z-40"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+      <div className=" mt-40 text-8xl text-center z-20 ">
+        <div className=" overflow-hidden">
+          <motion.div
+            variants={slideUp}
+            custom={0.2}
+            whileInView={"active"}
+            initial="initial"
           >
-            immersives
-          </span>
+            Digital products{" "}
+          </motion.div>
+        </div>
+        <div className="relative text-center flex ">
+          <div className="overflow-hidden">
+            <motion.div
+              variants={slideUp}
+              custom={0.3}
+              whileInView={"active"}
+              initial="initial"
+            >
+              creatives &
+            </motion.div>
+          </div>
+          <div className="overflow-hidden">
+            <motion.div
+              className="relative z-40"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              variants={slideUp}
+              custom={0.4}
+              whileInView={"active"}
+              initial="initial"
+            >
+              immersives
+            </motion.div>
+          </div>
         </div>
 
         <div className="flex flex-col text-base">
-          <span>We think and design unique experience</span>
-          <span>to tomorrow{"'"} innovative products</span>
+          <div className="overflow-hidden">
+            <motion.div
+              variants={slideUp}
+              custom={0.5}
+              whileInView={"active"}
+              initial="initial"
+            >
+              We think and design unique experience
+            </motion.div>
+          </div>
+          <div className="overflow-hidden">
+            <motion.div
+              variants={slideUp}
+              custom={0.6}
+              whileInView={"active"}
+              initial="initial"
+            >
+              to tomorrow{"'"} innovative products
+            </motion.div>
+          </div>
         </div>
 
         <motion.div
@@ -67,6 +114,68 @@ const Hero = () => {
           loop
           muted
         />
+      </div>
+
+      <div className="fixed gap-1  right-20 bottom-20 flex flex-col   z-50 text-base">
+        <motion.span
+          className="uppercase opacity-0 "
+          variants={{
+            hovered: {
+              opacity: 1,
+              y: "0",
+              transition: {
+                delay: 0.3,
+              },
+            },
+            notHovered: {
+              opacity: 0,
+              y: "100%",
+            },
+          }}
+          animate={isHovered ? "hovered" : "notHovered"}
+        >
+          /immersives
+        </motion.span>
+        <div className="flex flex-col">
+          <motion.span
+            className="opacity-0"
+            variants={{
+              hovered: {
+                opacity: 1,
+                y: "0",
+                transition: {
+                  delay: 0.35,
+                },
+              },
+              notHovered: {
+                opacity: 0,
+                y: "100%",
+              },
+            }}
+            animate={isHovered ? "hovered" : "notHovered"}
+          >
+            if you find a word marked with start, feel free hover over it
+          </motion.span>
+          <motion.span
+            className="opacity-0"
+            variants={{
+              hovered: {
+                opacity: 1,
+                y: "0",
+                transition: {
+                  delay: 0.4,
+                },
+              },
+              notHovered: {
+                opacity: 0,
+                y: "100%",
+              },
+            }}
+            animate={isHovered ? "hovered" : "notHovered"}
+          >
+            to descover its defination. As immersive as a glosary
+          </motion.span>
+        </div>
       </div>
     </div>
   );

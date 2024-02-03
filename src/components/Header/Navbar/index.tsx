@@ -30,8 +30,11 @@ const Navbar = () => {
   }, [navlist.current]);
   return (
     <div
-      className="fixed px-10 w-screen h-screen z-[70] text-slate-50   "
-      style={{ background: "rgb(15,15,15)" }}
+      className="fixed px-10 w-screen h-screen z-[200] bg-red-500   "
+      // style={{
+      //   background: "var(--primary-color)",
+      //   color: "var(--contrast-color)",
+      // }}
     >
       <div className="flex w-full h-full">
         <div className="relative w-[30%] flex items-center">
