@@ -1,7 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import { useFrame } from "@studio-freight/hamo";
+
+const lenisContext = createContext<Lenis | undefined>(undefined);
+export const useLenisScrollContext = () => useContext(lenisContext);
 
 const SmothScrollScrollProvider = ({
   children,
@@ -32,7 +35,7 @@ const SmothScrollScrollProvider = ({
 
   return (
     <>
-      {children}
+      <lenisContext.Provider value={lenis}>{children}</lenisContext.Provider>
     </>
   );
 };

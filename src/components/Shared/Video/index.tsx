@@ -18,6 +18,7 @@ const Video: FC<VideoProps> = ({ src, className,autoPlay,controls,loop,muted }) 
       muted={!muted ? false : muted}
       loop={!loop ? false : loop}
       className={!className ? "" : className}
+      
     >
       <source src={src} type="video/mp4" />
     </video>

@@ -17,7 +17,7 @@ const NavRow: FC<NavRowProps> = ({
 }) => {
   const styles = style == undefined ? {} : style;
   return (
-    <div style={{padding:"1.25rem 0", ...styles}} className="test">
+    <div  className={className}>
       <motion.span
         style={{
           backgroundImage: "linear-gradient(#fff, #fff)",
@@ -31,7 +31,6 @@ const NavRow: FC<NavRowProps> = ({
           color: "#fff",
           width: "fit-content",
         }}
-        className={!className ? "" : className}
         variants={{
           active: {
             WebkitBackgroundSize: `200% 200%`,
