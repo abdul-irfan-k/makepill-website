@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useLenisScrollContext } from "@/provider/SmoothScrollProvider";
 import Video from "@/components/Shared/Video";
 import { motion } from "framer-motion";
+import TextHoverBorderEffect from "@/components/Effects/TextHoverBorderEffect";
 
 type row =
   | "home"
@@ -78,12 +79,22 @@ const Navbar = ({ isActive }: { isActive: boolean }) => {
     >
       <div className="flex w-full h-full">
         <div className="relative w-[16%] flex items-center">
-          <div className="gap-10 flex flex-col">
-            <span>Instagram</span>
-            <span>X/Twitter</span>
-            <span>Dribble</span>
-            <span>Youtube</span>
-            <span>Linkedin</span>
+          <div className="gap-8 flex flex-col">
+            <TextHoverBorderEffect>
+              <span>Instagram</span>
+            </TextHoverBorderEffect>
+            <TextHoverBorderEffect>
+              <span>X/Twitter</span>
+            </TextHoverBorderEffect>
+            <TextHoverBorderEffect>
+              <span>Dribble</span>
+            </TextHoverBorderEffect>
+            <TextHoverBorderEffect>
+              <span>Youtube</span>
+            </TextHoverBorderEffect>
+            <TextHoverBorderEffect>
+              <span>Linkedin</span>
+            </TextHoverBorderEffect>
           </div>
           <div className="absolute bottom-0">
             <span className="border-b-[1px]">hell@makepill.com</span>

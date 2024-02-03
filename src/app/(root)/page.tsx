@@ -11,7 +11,7 @@ import Project from "@/components/Project";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
       <PageSlideUp>
         <div className="slide">

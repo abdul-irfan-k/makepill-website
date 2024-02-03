@@ -36,7 +36,7 @@ const Hero = () => {
         <div className=" overflow-hidden">
           <motion.div
             variants={slideUp}
-            custom={0.2}
+            custom={6.2}
             whileInView={"active"}
             initial="initial"
           >
@@ -47,7 +47,7 @@ const Hero = () => {
           <div className="overflow-hidden">
             <motion.div
               variants={slideUp}
-              custom={0.3}
+              custom={6.3}
               whileInView={"active"}
               initial="initial"
             >
@@ -60,11 +60,11 @@ const Hero = () => {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               variants={slideUp}
-              custom={0.4}
+              custom={6.4}
               whileInView={"active"}
               initial="initial"
             >
-              immersives
+              immersives <span className="text-yellow-500">*</span>
             </motion.div>
           </div>
         </div>
@@ -73,7 +73,7 @@ const Hero = () => {
           <div className="overflow-hidden">
             <motion.div
               variants={slideUp}
-              custom={0.5}
+              custom={6.5}
               whileInView={"active"}
               initial="initial"
             >
@@ -83,7 +83,7 @@ const Hero = () => {
           <div className="overflow-hidden">
             <motion.div
               variants={slideUp}
-              custom={0.6}
+              custom={6.6}
               whileInView={"active"}
               initial="initial"
             >
@@ -116,7 +116,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="fixed gap-1  right-20 bottom-20 flex flex-col   z-50 text-base">
+      <div className="fixed gap-1  right-20 bottom-20  flex flex-col   z-50 text-base">
         <motion.span
           className="uppercase opacity-0 "
           variants={{
