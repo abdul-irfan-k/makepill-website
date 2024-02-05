@@ -14,7 +14,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 }) => {
   return (
     <div
-      className="w-full flex justify-between items-center text-slate-50"
+      className="w-full flex justify-between items-center "
       onMouseEnter={() => {
         if (onHoverHandler) onHoverHandler();
       }}
@@ -22,7 +22,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
     >
       <span
         className={
-          "text-8xl " + (isActive ? "text-slate-50" : "text-slate-300")
+          "text-8xl " + (isActive ? " " : "text-slate-300")
         }
       >
         {title}

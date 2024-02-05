@@ -18,7 +18,7 @@ const Culture = () => {
         },
       },
     });
-  }, [cultureContainer.current]);
+  }, []);
   return (
     <div
       className="gap-10 px-32 pt-80 pb-32 flex justify-between items-center"
@@ -32,7 +32,7 @@ const Culture = () => {
         <span>/Our culture</span>
         <div className="mt-10 gap-10 flex flex-col text-4xl">
           <span>
-            Human values and high standards are core components of our teams'
+            Human values and high standards are core components of our teams{`'`}
             philosophy and culture.
           </span>
           <span>

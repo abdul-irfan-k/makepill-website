@@ -61,9 +61,9 @@ const SocialLink = ({ label, href }: SocialLinkProps) => {
             >
               {arr.map((elm, index) => {
                 return (
-                  <div className="flex ">
+                  <div className="flex " key={index}>
                     <span key={index} className="px-8 flex items-center ">
-                      {label} 
+                      {label}{elm}
                       <span className="text-yellow-300 text-4xl ml-2"><StarIcon width={30} height={30}  /></span>
                     </span>
                     <span className="px-8 text-slate-300">@makepill</span>

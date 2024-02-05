@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="absolute top-[50%]  translate-y-[-50%] flex flex-col items-center">
           <span className="text-9xl text-nowrap">Brif us now</span>
           <span className="text-2xl">
-            Let's build now together you tomorrow's project.
+            Let{`'`}s build now together you tomorrow{`'`}s project.
           </span>
         </div>
       </div>
