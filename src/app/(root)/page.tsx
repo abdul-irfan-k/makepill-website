@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Project from "@/components/Project";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const HomePage = () => {
   return (
@@ -28,6 +29,7 @@ const HomePage = () => {
       <Clients />
       <Awards />
       <Footer />
+      <ScrollProgress />
     </div>
   );
 };
