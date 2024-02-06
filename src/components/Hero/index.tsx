@@ -37,7 +37,7 @@ const Hero = () => {
           <motion.div
             variants={slideUp}
             custom={6.2}
-            whileInView={"active"}
+            animate={"active"}
             initial="initial"
           >
             Digital products{" "}
@@ -48,7 +48,7 @@ const Hero = () => {
             <motion.div
               variants={slideUp}
               custom={6.3}
-              whileInView={"active"}
+              animate={"active"}
               initial="initial"
             >
               creatives &
@@ -61,7 +61,7 @@ const Hero = () => {
               onMouseLeave={() => setIsHovered(false)}
               variants={slideUp}
               custom={6.4}
-              whileInView={"active"}
+              animate={"active"}
               initial="initial"
             >
               immersives <span className="text-yellow-500">*</span>
@@ -74,7 +74,7 @@ const Hero = () => {
             <motion.div
               variants={slideUp}
               custom={6.5}
-              whileInView={"active"}
+              animate={"active"}
               initial="initial"
             >
               We think and design unique experience
@@ -84,7 +84,7 @@ const Hero = () => {
             <motion.div
               variants={slideUp}
               custom={6.6}
-              whileInView={"active"}
+              animate={"active"}
               initial="initial"
             >
               to tomorrow{"'"} innovative products

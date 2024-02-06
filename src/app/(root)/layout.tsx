@@ -9,10 +9,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <GsapProvider>
         <SmothScrollScrollProvider>
-          {/* <LandingSection> */}
-            <MouseTracker />
+          <LandingSection>
+            {/* <MouseTracker /> */}
             {children}
-          {/* </LandingSection> */}
+          </LandingSection>
         </SmothScrollScrollProvider>
       </GsapProvider>
     </>

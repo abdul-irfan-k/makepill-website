@@ -27,7 +27,7 @@ const NavButton: FC<NavButtonProps> = ({ onClickHandler }) => {
         }}
         animate={isClicked ? "hover" : "Initial"}
         style={{
-          borderColor:"var(--contrast-color)"
+          borderColor:"var(--contrast-color)",
         }}
       >
         M

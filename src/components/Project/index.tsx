@@ -13,8 +13,8 @@ const Project = () => {
   const testRef = useRef<HTMLDivElement>(null);
 
   const [hoveredProject, setHoveredProject] = useState<
-    "BattleHack" | "Greenbet" | "Airbus Gaming" | "Caption" | undefined
-  >(undefined);
+    "BattleHack" | "Greenbet" | "Airbus Gaming" | "Caption" 
+  >("BattleHack");
   const [projectContainerHovered, setProjectContainerHovered] = useState(true);
   const [allProjectButtonHovered, setAllProjectButtonHovered] = useState(false);
 
